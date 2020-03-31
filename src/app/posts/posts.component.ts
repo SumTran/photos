@@ -134,7 +134,7 @@ export class PostsComponent implements OnInit {
         this.photoPage.next_page = resp.next_page;
       });
   }
-  
+
 
   focusInput($event: FocusEvent) {
     console.log($event);
