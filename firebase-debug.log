@@ -1,0 +1,92 @@
+[debug] [2020-03-31T16:46:11.332Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T16:46:11.334Z] Command:       /usr/local/Cellar/node@10/10.18.0/bin/node /usr/local/bin/firebase deploy --token 0gg73rNUGI-ljCgYIARAAGBASNwF-L9IroAaVrfwV2-jVBqbp19a7cFuvnorqNTYOly0e_H8_FFaJANpLmqTOZg8kqAGLl4iDkQc
+[debug] [2020-03-31T16:46:11.334Z] CLI Version:   7.16.2
+[debug] [2020-03-31T16:46:11.334Z] Platform:      darwin
+[debug] [2020-03-31T16:46:11.334Z] Node Version:  v10.18.0
+[debug] [2020-03-31T16:46:11.335Z] Time:          Tue Mar 31 2020 23:46:11 GMT+0700 (Indochina Time)
+[debug] [2020-03-31T16:46:11.335Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T16:46:11.335Z] 
+[debug] [2020-03-31T16:46:11.342Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T16:46:11.342Z] > authorizing via --token option
+[debug] [2020-03-31T16:46:11.343Z] [iam] checking project fir-f8c7a for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-03-31T16:46:11.344Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T16:46:11.345Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-31T16:46:11.531Z] <<< HTTP RESPONSE 400
+[debug] [2020-03-31T16:46:11.533Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-f8c7a:testIamPermissions  
+
+[debug] [2020-03-31T16:46:12.738Z] <<< HTTP RESPONSE 401
+[debug] [2020-03-31T16:46:12.738Z] <<< HTTP RESPONSE BODY
+[debug] [2020-03-31T16:46:12.740Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2020-03-31T16:46:12.742Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T16:46:12.742Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-31T16:46:12.853Z] <<< HTTP RESPONSE 400
+[debug] [2020-03-31T16:46:12.854Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fir-f8c7a  
+ 
+[debug] [2020-03-31T16:46:13.017Z] <<< HTTP RESPONSE 401
+[debug] [2020-03-31T16:46:13.017Z] <<< HTTP RESPONSE BODY
+[debug] [2020-03-31T16:46:13.018Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2020-03-31T16:46:13.149Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:40:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1143:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project fir-f8c7a. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-03-31T16:48:28.612Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T16:48:28.614Z] Command:       /usr/local/Cellar/node@10/10.18.0/bin/node /usr/local/bin/firebase deploy --token 0gg73rNUGI-ljCgYIARAAGBASNwF-L9IroAaVrfwV2-jVBqbp19a7cFuvnorqNTYOly0e_H8_FFaJANpLmqTOZg8kqAGLl4iDkQc
+[debug] [2020-03-31T16:48:28.614Z] CLI Version:   7.16.2
+[debug] [2020-03-31T16:48:28.614Z] Platform:      darwin
+[debug] [2020-03-31T16:48:28.614Z] Node Version:  v10.18.0
+[debug] [2020-03-31T16:48:28.615Z] Time:          Tue Mar 31 2020 23:48:28 GMT+0700 (Indochina Time)
+[debug] [2020-03-31T16:48:28.615Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T16:48:28.615Z] 
+[debug] [2020-03-31T16:48:28.622Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T16:48:28.623Z] > authorizing via --token option
+[debug] [2020-03-31T16:48:28.623Z] [iam] checking project fir-f8c7a for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-03-31T16:48:28.624Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T16:48:28.625Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-31T16:48:28.790Z] <<< HTTP RESPONSE 400
+[debug] [2020-03-31T16:48:28.792Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fir-f8c7a:testIamPermissions  
+
+[debug] [2020-03-31T16:48:30.015Z] <<< HTTP RESPONSE 401
+[debug] [2020-03-31T16:48:30.016Z] <<< HTTP RESPONSE BODY
+[debug] [2020-03-31T16:48:30.018Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2020-03-31T16:48:30.019Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T16:48:30.019Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-31T16:48:30.124Z] <<< HTTP RESPONSE 400
+[debug] [2020-03-31T16:48:30.124Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fir-f8c7a  
+ 
+[debug] [2020-03-31T16:48:30.252Z] <<< HTTP RESPONSE 401
+[debug] [2020-03-31T16:48:30.253Z] <<< HTTP RESPONSE BODY
+[debug] [2020-03-31T16:48:30.253Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2020-03-31T16:48:30.382Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:40:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1143:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project fir-f8c7a. Please make sure the project exists and your account has permission to access it.
