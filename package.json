@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve ",
     "build": "ng build",
+    "build-prod": "ng build --prod",
+    "deploy": "firebase deploy --token $FIREBASE_TOKEN --non-interactive",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -38,6 +40,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.12.31",
     "codelyzer": "^5.1.2",
+    "firebase-tools": "^7.16.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
