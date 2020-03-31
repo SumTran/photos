@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
     "mat-progress-buttons": "^9.1.1",
+    "puppeteer": "^2.1.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "unsplash-js": "^6.0.0",
