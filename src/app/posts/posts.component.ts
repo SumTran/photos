@@ -134,11 +134,7 @@ export class PostsComponent implements OnInit {
         this.photoPage.next_page = resp.next_page;
       });
   }
-
-  fetchPopularVideos() {
-    this.searchWith = "video";
-    this.toastService.success("...");
-  }
+  
 
   focusInput($event: FocusEvent) {
     console.log($event);
