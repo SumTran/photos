@@ -1,0 +1,21 @@
+:host {
+  display: block;
+
+  .headers {
+    a {
+      text-decoration: none;
+      width: 100px;
+      margin-right: 5rem;
+      color: white;
+    }
+
+    .active {
+      border-bottom: 1px solid;
+      border-radius: 0;
+    }
+    &__link {
+      margin-right: 0.25rem;
+    }
+
+  }
+}

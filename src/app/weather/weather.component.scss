@@ -1,0 +1,24 @@
+
+.some-page-wrapper {
+  //max-width: calc(900px + 5rem);
+  margin: 1rem auto;
+
+  a {
+    border-bottom: 1px dotted rgba(0,0,0,.6);
+    padding: 0.5rem;
+
+    img {
+      margin-right: 1rem;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+    }
+    &:hover {
+      background: #fff9b8;
+      cursor: pointer;
+    }
+  }
+}
+.first {
+  height: 200px;
+}

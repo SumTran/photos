@@ -1,0 +1,20 @@
+<mat-toolbar
+  color="primary"
+  class="headers mat-elevation-z2"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+>
+  <a class="headers__title" href="/">Hello Sum</a>
+
+  <div class="headers__tab">
+    <button
+      *ngFor="let link of links"
+      mat-button
+      class="headers__link"
+      [routerLink]="link.key"
+      [routerLinkActive]="'active'"
+    >
+      {{ link.value }}
+    </button>
+  </div>
+</mat-toolbar>

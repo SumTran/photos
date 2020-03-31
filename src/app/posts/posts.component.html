@@ -1,0 +1,87 @@
+<section
+  class="quote"
+  fxLayout="column"
+  *ngIf="quote"
+  fxLayoutAlign="center center"
+>
+  <blockquote>{{ quote["content"] }}</blockquote>
+  <cite>{{ quote["author"] }}</cite>
+  <div class="search-box ">
+    <input
+      (focus)="focusInput($event)"
+      (blur)="blur($event)"
+      id="name"
+      class="search-box__input AAA"
+      [(ngModel)]="photoQuery"
+      (keyup.enter)="searchPhoto()"
+      placeholder="Search"
+    />
+    <mat-icon
+      class="search-box__search-btn"
+      *ngIf="!fetchingPhoto"
+      (click)="searchPhoto()"
+      svgIcon="search"
+    ></mat-icon>
+
+    <mat-icon
+      class="search-box__close-btn"
+      *ngIf="!fetchingPhoto && photoQuery"
+      (click)="resetQuery()"
+      svgIcon="close"
+    ></mat-icon>
+
+    <mat-spinner
+      *ngIf="photoQuery && fetchingPhoto"
+      [strokeWidth]="2"
+      [diameter]="25"
+      color="accent"
+    ></mat-spinner>
+  </div>
+
+  <mat-chip-list>
+    <mat-chip
+      *ngFor="let option of chipOptions"
+      color="primary"
+      [selected]="photoQuery == option.key"
+      (click)="searchBaby(option.key)"
+      >#{{ option.value }}</mat-chip
+    >
+  </mat-chip-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section fxLayout="column" fxLayoutGap="1rem">
+  <div fxFlex="100" class="photos">
+    <div fxLayout="row wrap" fxLayoutGap="1rem">
+      <ng-container *ngIf="photoPage">
+        <div
+          class="row"
+          fxFlex="300px"
+          *ngFor="let photo of photoPage.photos"
+          (click)="openImage(photo)"
+        >
+          <img
+            width="100%"
+            *ngIf="photo && photo.src"
+            src="{{ photo.src.portrait }}"
+            alt=""
+          />
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<div fxLayout="column" fxLayoutAlign="center center" class="loading-more">
+  <button
+    *ngIf="!loadingMore && !fetchingPhoto"
+    class="loading-more__btn"
+    color="primary"
+    mat-stroked-button
+    (click)="loadMore()"
+  >
+    Load more
+  </button>
+  <mat-spinner *ngIf="loadingMore" diameter="30" strokeWidth="2"></mat-spinner>
+</div>
