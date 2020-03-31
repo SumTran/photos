@@ -99,10 +99,6 @@ export class PostsComponent implements OnInit {
     this.searchPhoto();
   }
 
-  searchGirl() {
-    this.photoQuery = "girl";
-    this.searchPhoto();
-  }
   loadMore() {
     this.loadingMore = true;
     this.dictionaryService
