@@ -24,7 +24,7 @@
       cursor: pointer;
       position: absolute;
       left: 3%;
-      top: 25%;
+      top: 21%;
       color: #434343;
     }
     &__close-btn {
@@ -32,7 +32,6 @@
       position: absolute;
       right: 3%;
       top: 20%;
-      transform: translate(0%, 0%);
       color: #434343;
     }
     &__photo {
@@ -55,7 +54,7 @@
     }
     mat-spinner {
       position: absolute;
-      left: 3%;
+      right: 3%;
       top: 20%;
     }
   }
