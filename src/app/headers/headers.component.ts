@@ -10,7 +10,7 @@ import { KeyValue } from "@angular/common";
 export class HeadersComponent implements OnInit {
   readonly links: KeyValue<string, string>[] = [
     { key: "photos", value: "Photos" },
-    { key: "unsplash", value: "Unsplash" }
+    // { key: "unsplash", value: "Unsplash" }
   ];
   constructor(private router: Router) {}
 
