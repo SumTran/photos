@@ -103,27 +103,6 @@ export class PostsComponent implements OnInit {
     this.photoQuery = "girl";
     this.searchPhoto();
   }
-
-  // @HostListener("window:scroll", ["$event"])
-  // onWindowScroll() {
-  //   if (this.isDialogOpened) return;
-  //   let pos =
-  //     (document.documentElement.scrollTop || document.body.scrollTop) +
-  //     document.documentElement.offsetHeight;
-  //   let max = document.documentElement.scrollHeight;
-  //   if (pos == max) {
-  //     // this.spinner.showSpinner();
-  //     this.loadingMore = true
-  //     this.dictionaryService
-  //       .fetchNextPage(this.photoPage.next_page)
-  //       .pipe(finalize(() => this.loadingMore = false))
-  //       .subscribe(resp => {
-  //         this.photoPage.photos = this.photoPage.photos.concat(resp.photos);
-  //         this.photoPage.next_page = resp.next_page;
-  //       });
-  //   }
-  // }
-  isFocusInput: boolean;
   loadMore() {
     this.loadingMore = true;
     this.dictionaryService
@@ -133,16 +112,6 @@ export class PostsComponent implements OnInit {
         this.photoPage.photos = this.photoPage.photos.concat(resp.photos);
         this.photoPage.next_page = resp.next_page;
       });
-  }
-
-
-  focusInput($event: FocusEvent) {
-    console.log($event);
-    this.isFocusInput = true;
-  }
-
-  blur($event: FocusEvent) {
-    if(!this.photoQuery) this.isFocusInput = false;
   }
 
   resetQuery() {

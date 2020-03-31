@@ -8,8 +8,6 @@
   <cite>{{ quote["author"] }}</cite>
   <div class="search-box ">
     <input
-      (focus)="focusInput($event)"
-      (blur)="blur($event)"
       #search
       class="search-box__input AAA"
       [(ngModel)]="photoQuery"
