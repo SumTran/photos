@@ -8,7 +8,7 @@ import { MatIconRegistry } from "@angular/material/icon";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
-  title = 'Photos';
+  title = 'useful';
   constructor(
     private sanitizer: DomSanitizer,
     private iconRegistry: MatIconRegistry
