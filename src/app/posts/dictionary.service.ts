@@ -38,7 +38,7 @@ export class DictionaryService {
     const headers = new HttpHeaders().set(
       "Authorization",
       "563492ad6f91700001000001d5dc7360ab1d4ddc9b20fdf0eb92a18f"
-    ).set('Access-Control-Allow-Origin', '*');
+    );
     if (query) {
       return this.searchPhotos(params, headers);
     }
